@@ -11,7 +11,7 @@
 <section class="primary-content">
     <div class="container">        
         <div class="row">         	
-            <main class="col-md-7 col-md-offset-0 col-lg-7 col-lg-offset-1 main-col page-content">   
+            <main class="col-md-7 col-md-offset-0 col-lg-6 col-lg-offset-1 main-col page-content">   
 				<div id="main" class="site-main" role="main">
 					<?php 
 					while (have_posts()) {

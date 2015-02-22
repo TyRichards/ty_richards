@@ -239,3 +239,5 @@ require get_template_directory() . '/inc/template-widgets-hook.php';
 
 // Image Thumbnail Sizes
 add_image_size( 'sidebar-thumb', 500, 9999 );
+add_image_size( 'single-thumb', 600, 9999 );
+set_post_thumbnail_size( 500, 9999 );

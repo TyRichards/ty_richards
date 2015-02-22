@@ -28,6 +28,8 @@ define('DB_PASSWORD', 'D9KZdM8ejBRx');
 define('WP_HOME','http://dev.tyrichards.com/');
 define('WP_SITEURL','http://dev.tyrichards.com/');
 
+// define( 'WP_PLUGIN_DIR', dirname(__FILE__) . '/blog/wp-content/plugins2' );
+
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
 

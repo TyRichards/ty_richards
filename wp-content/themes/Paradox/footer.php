@@ -7,18 +7,7 @@
 ?>
 		</div><!--.body-content-->			
 		<footer class="footer">	
-			<?php // get_footer('lg'); ?>
-      		<section class="small-footer">
-      			<div class="container">
-      				<div class="row">
-	      				<div class="">
-			        		<div class="text-center footer-menu">
-			        			
-			        		</div>
-		        		</div>
-			        </div> <!-- .row -->				        
-	        	</div> <!-- .container -->
-	        </section>	
+			<?php // get_footer('lg'); ?>      		
       		<section class="credit-footer">
       			<div class="container">		        
 					<div class="row">
@@ -58,5 +47,6 @@
 		<!-- Typekit -->
 		<script src="//use.typekit.net/yln6zrk.js"></script>
 		<script>try{Typekit.load();}catch(e){}</script>
+		<script src="https://platform.vine.co/static/scripts/embed.js"></script>
 	</body>
 </html>

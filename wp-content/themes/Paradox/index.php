@@ -16,109 +16,111 @@
             </aside>          -->                  	
             <main class="col-md-12 main-col page-content">                
             <!-- <main class="col-md-12 col-md-offset-1 col-lg-7 col-lg-offset-1 main-col page-content">                 -->
+
                 <div id="main" class="site-main" role="main">                	
-                    <div id="box-container" class="masonry js-masonry" data-masonry-options='{ "columnWidth": ".grid-sizer", "itemSelector": ".box-item" }'">
-                        <div class="grid-sizer"></div>
+                    <div id="box-container" class="masonry js-masonry" data-masonry-options='{ "columnWidth": ".grid-sizer", "itemSelector": ".box-item" }'>
+                        <div class="grid-sizer"></div> 
 
+                        <?php if(get_field('featured_post')) { ?>                                                  
+                            <!-- Featured Post -->
+                            <article class="box-item panel panel-default" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                                <div class="entry-header panel-heading">
+                                    <!-- Feature Image -->
+                                    <?php
+                                    if (has_post_thumbnail()) { 
+                                        echo '<a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '">';                
+                                        the_post_thumbnail();
+                                        echo '</a>';            
+                                    } 
+                                    ?>          
+                                    <!-- Audio -->
+                                    <?php if(get_field('playlist')) {
+                                        echo get_field('playlist');
+                                    } ?>
+                                    <!-- Video -->
+                                    <?php if(get_field('youtube')) { ?>
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo the_field('youtube'); ?>?vq=hd720&rel=0&autohide=1&controls=1&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen></iframe>                  
+                                        </div>
+                                    <?php } ?>      
+                                    <?php if(get_field('vine')) { ?>
+                                        <div class="embed-responsive embed-responsive-1by1">
+                                            <iframe src="https://vine.co/v/<?php echo the_field('vine'); ?>/embed/simple" width="600" height="600" frameborder="0"></iframe>       
+                                        </div>
+                                    <?php } ?>
+                                </div><!-- .entry-header -->
 
+                                <div class="entry-summary panel-body">
+                                    <h2 class="entry-title" style="margin-top: 0;"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+                                        <?php the_excerpt(); ?>
+                                </div>
+                            </article><!-- #post-## -->  
 
+                            <?php } ?>                                                            
 
-<article class="box-item panel panel-default" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <div class="entry-header panel-heading">
-        Custom Image
-    </div><!-- .entry-header -->
-
-    <div class="entry-summary panel-body">
-        <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark">Permanent Post</a></h1>
-
-        <?php if ('post' == get_post_type()) { ?> 
-        <div class="entry-meta">
-            <?php bootstrapBasicPostOn(); ?> 
-        </div><!-- .entry-meta -->
-        <?php } //endif; ?> 
-                
-    <?php if (is_search()) { // Only display Excerpts for Search ?> 
-        <?php the_excerpt(); ?> 
-        <div class="clearfix"></div>
-    </div><!-- .entry-summary -->
-    <?php } else { ?> 
-    <div class="entry-content">
-        <?php the_content(bootstrapBasicMoreLinkText()); ?> 
-        <div class="clearfix"></div>
-        <?php 
-        /**
-         * This wp_link_pages option adapt to use bootstrap pagination style.
-         * The other part of this pager is in inc/template-tags.php function name bootstrapBasicLinkPagesLink() which is called by wp_link_pages_link filter.
-         */
-        wp_link_pages(array(
-            'before' => '<div class="page-links">' . __('Pages:', 'bootstrap-basic') . ' <ul class="pagination">',
-            'after'  => '</ul></div>',
-            'separator' => ''
-        ));
-        ?> 
-    </div><!-- .entry-content -->
-    <?php } //endif; ?> 
-
-    <div class="well well-lg text-center">
-            <?php gravity_form(5, true, true, false, null, true, 50); ?>
-    </div>  
-
-    <footer class="entry-meta">
-        <?php if ('post' == get_post_type()) { // Hide category and tag text for pages on Search ?> 
-        <div class="entry-meta-category-tag">
-            <?php
-                /* translators: used between list items, there is a space after the comma */
-                $categories_list = get_the_category_list(__(', ', 'bootstrap-basic'));
-                if (!empty($categories_list)) {
-            ?> 
-            <span class="cat-links">
-                <?php echo bootstrapBasicCategoriesList($categories_list); ?> 
-            </span>
-            <?php } // End if categories ?> 
-
-            <?php
-                /* translators: used between list items, there is a space after the comma */
-                $tags_list = get_the_tag_list('', __(', ', 'bootstrap-basic'));
-                if ($tags_list) {
-            ?> 
-            <span class="tags-links">
-                <?php echo bootstrapBasicTagsList($tags_list); ?> 
-            </span>
-            <?php } // End if $tags_list ?> 
-        </div><!--.entry-meta-category-tag-->
-        <?php } // End if 'post' == get_post_type() ?> 
-
-<!--        <div class="entry-meta-comment-tools">
-            <?php if (! post_password_required() && (comments_open() || '0' != get_comments_number())) { ?> 
-            <span class="comments-link"><?php bootstrapBasicCommentsPopupLink(); ?></span>
-            <?php } //endif; ?> 
-
-            <?php bootstrapBasicEditPostLink(); ?> 
-        </div> --><!--.entry-meta-comment-tools-->
-    </footer><!-- .entry-meta -->
-</article><!-- #post-## -->
-
-
-
-
+                            <!-- REGULAR BLOG LOOP -->
             				<?php if (have_posts()) { ?> 
                 				<?php 
                 				// start the loop
                 				while (have_posts()) {
-                					the_post();
-                					
+                					the_post();                                                   					
                 					/* Include the Post-Format-specific template for the content.
                 					* If you want to override this in a child theme, then include a file
                 					* called content-___.php (where ___ is the Post Format name) and that will be used instead.
                 					*/
-                					get_template_part('content', get_post_format());
+                					// get_template_part('content', get_post_format());
+
+                                    ?> 
+
+                                    <!-- Article -->
+                                    <article class="box-item panel panel-default" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                                        <div class="entry-header panel-heading">
+                                            <!-- Feature Image -->
+                                            <?php
+                                            if (has_post_thumbnail()) { 
+                                                echo '<a href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '">';                
+                                                the_post_thumbnail();
+                                                echo '</a>';            
+                                            } 
+                                            ?>          
+                                            <!-- Audio -->
+                                            <?php if(get_field('playlist')) {
+                                                echo get_field('playlist');
+                                            } ?>
+                                            <!-- Video -->
+                                            <?php if(get_field('youtube')) { ?>
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo the_field('youtube'); ?>?vq=hd720&rel=0&autohide=1&controls=1&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen></iframe>                  
+                                                </div>
+                                            <?php } ?>      
+                                            <?php if(get_field('vine')) { ?>
+                                                <div class="embed-responsive embed-responsive-1by1">
+                                                    <iframe src="https://vine.co/v/<?php echo the_field('vine'); ?>/embed/simple" width="600" height="600" frameborder="0"></iframe>       
+                                                </div>
+                                            <?php } ?>
+                                        </div><!-- .entry-header -->
+
+                                        <div class="entry-summary panel-body">
+                                            <h2 class="entry-title" style="margin-top: 0;"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+                                                <?php the_excerpt(); ?>
+                                            <?php if ('post' == get_post_type()) { ?> 
+                                            <div class="entry-meta">
+                                                <?php bootstrapBasicPostOn(); ?> 
+                                            </div><!-- .entry-meta -->
+                                            <?php } //endif; ?> 
+                                        </div>
+                                    </article><!-- #post-## -->
+                                <?php    
+
+
                 			}// end while
             				bootstrapBasicPagination(); 
                             ?>
 
             				<?php } else { ?> 
             				<?php get_template_part('no-results', 'index'); ?>
-            				<?php } // endif; ?>					
+            				<?php } // endif; ?>		
+                            <!-- END REGULAR BLOG LOOP -->			
                         </div>
                     </div>
                 </div>           
