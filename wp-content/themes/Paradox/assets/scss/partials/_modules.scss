@@ -1036,10 +1036,21 @@ box-shadow: 0px 1px 10px 0px rgba(0,0,0,1);
         text-transform: uppercase;
     }
 }
-.single-post footer.entry-meta {
-    margin-top: 0;
-    background-color: $gray-lighter;
-    padding: 10px 15px;
+.single-post {
+    footer.entry-meta {
+        margin-top: 0;
+        background-color: $gray-lighter;
+        padding: 10px 15px;
+    }
+    .sidebar {
+        .entry-summary {
+            padding: 20px!important;
+            h2 { font-size: 20px; }
+            a, .btn, p, ul, li { margin-top: 20px }
+            .entry-meta { display: none; }
+        }
+    }
+
 }
 .white-panel { 
     background-color: white; 
@@ -1052,4 +1063,11 @@ box-shadow: 0px 1px 10px 0px rgba(0,0,0,1);
     background-color: white;
     padding: 30px;
     margin-top: 30px;
+}
+
+
+// Sticky
+
+.sticky { 
+    .posted-on { display: none; }
 }
