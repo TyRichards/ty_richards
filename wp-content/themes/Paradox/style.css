@@ -11756,64 +11756,75 @@ input:focus:-ms-input-placeholder {
 }
 
 /* line 1028, ../scss/partials/_modules.scss */
+article {
+  background-color: #ffffff;
+}
+
+/* line 1030, ../scss/partials/_modules.scss */
 .single-post article.post {
   background-color: #ffffff;
 }
-/* line 1031, ../scss/partials/_modules.scss */
+/* line 1033, ../scss/partials/_modules.scss */
 .single-post article.post .entry-summary {
   padding: 30px;
 }
-/* line 1033, ../scss/partials/_modules.scss */
+/* line 1035, ../scss/partials/_modules.scss */
 .single-post article.post .entry-summary .entry-meta {
   margin-top: 30px;
 }
-/* line 1035, ../scss/partials/_modules.scss */
+/* line 1037, ../scss/partials/_modules.scss */
 .single-post article.post .byline {
   text-transform: uppercase;
 }
 
-/* line 1040, ../scss/partials/_modules.scss */
+/* line 1042, ../scss/partials/_modules.scss */
 .single-post footer.entry-meta {
   margin-top: 0;
   background-color: #eeeeee;
   padding: 10px 15px;
 }
-/* line 1046, ../scss/partials/_modules.scss */
+/* line 1048, ../scss/partials/_modules.scss */
 .single-post .sidebar .entry-summary {
   padding: 20px !important;
 }
-/* line 1048, ../scss/partials/_modules.scss */
-.single-post .sidebar .entry-summary h2 {
-  font-size: 20px;
-}
-/* line 1049, ../scss/partials/_modules.scss */
+/* line 1050, ../scss/partials/_modules.scss */
 .single-post .sidebar .entry-summary a, .single-post .sidebar .entry-summary .btn, .single-post .sidebar .entry-summary .gform_button, .single-post .sidebar .entry-summary .archive .page-title, .archive .single-post .sidebar .entry-summary .page-title, .single-post .sidebar .entry-summary .more-link, .single-post .sidebar .entry-summary p, .single-post .sidebar .entry-summary ul, .single-post .sidebar .entry-summary li {
   margin-top: 20px;
 }
-/* line 1050, ../scss/partials/_modules.scss */
+/* line 1051, ../scss/partials/_modules.scss */
 .single-post .sidebar .entry-summary .entry-meta {
   display: none;
 }
 
-/* line 1055, ../scss/partials/_modules.scss */
+/* line 1056, ../scss/partials/_modules.scss */
+.sidebar .entry-summary h2 {
+  font-size: 20px;
+}
+
+/* line 1058, ../scss/partials/_modules.scss */
 .white-panel {
   background-color: white;
   padding: 30px;
 }
 
-/* line 1059, ../scss/partials/_modules.scss */
+/* line 1062, ../scss/partials/_modules.scss */
 .updates-form {
   margin-top: 30px;
 }
 
-/* line 1062, ../scss/partials/_modules.scss */
+/* line 1065, ../scss/partials/_modules.scss */
 #disqus_thread {
   background-color: white;
   padding: 30px;
   margin-top: 30px;
 }
 
-/* line 1072, ../scss/partials/_modules.scss */
+/* line 1074, ../scss/partials/_modules.scss */
+article .entry-content {
+  padding: 30px;
+}
+
+/* line 1079, ../scss/partials/_modules.scss */
 .sticky .posted-on {
   display: none;
 }
@@ -11952,7 +11963,7 @@ input:focus:-ms-input-placeholder {
 
   /* line 127, ../scss/partials/_states.scss */
   .navbar-header .navbar-brand {
-    width: 100%;
+    width: 67%;
   }
 
   /* line 131, ../scss/partials/_states.scss */
