@@ -1,0 +1,176 @@
+// Inclusive Media Queries /////////////////////////////////////////////////////////////////
+
+// Extra small devices (phones, less than 768px)
+// No media query since this is the default in Bootstrap (These are included in modules & layouts sass files)
+
+// Small devices (tablets, 768px and up)
+@media (min-width: $screen-sm-min) {
+
+    .box-item, .grid-sizer { width: 46.6667%; }
+
+    .navbar-collapse .navbar-nav li {
+       border: none;
+    }
+
+    .small-footer {
+
+        a {
+            display: inline;
+            text-align: left;        
+        }
+
+        .footer-menu, .footer-credits {
+            width: auto;
+        }    
+
+        .footer-credits a,
+        .footer-menu .menu li a {
+            padding-right: $space-sm;
+        }
+    }
+
+
+}
+
+// Medium devices (desktops, 992px and up)
+@media (min-width: $screen-md-min) {
+
+    .box-item, .grid-sizer { width: 30%; }
+
+    // #features { background: #ffffff url('../Paradox/assets/images/bg-practice-w.jpg') left 0px no-repeat fixed; }
+    #features { background: #ffffff url('../Paradox/assets/images/bg-3.jpg') left 0px no-repeat fixed; }
+    // #features2 { background: $body-bg url('../Paradox/assets/images/bg-ac2-b.jpg') right 0px no-repeat fixed; }
+    #features2 { background: $body-bg url('../Paradox/assets/images/bg-4.jpg') right 0px no-repeat fixed; }
+    // #features3 { background: $body-bg url('../Paradox/assets/images/bg-practice2-w.jpg') left 0px no-repeat fixed; }
+    #features3 { background: $body-bg url('../Paradox/assets/images/bg-5.jpg') left 0px no-repeat fixed; }
+    // #features4 { background: $body-bg url('../Paradox/assets/images/bg-performance-b.jpg') left 0px no-repeat fixed; }
+    #features4 { background: $body-bg url('../Paradox/assets/images/bg-6.jpg') left 0px no-repeat fixed; }
+
+    header .navbar-brand img {
+        width: 100%;
+    }    
+
+    .logos .container .cred-logo {
+        padding-left: 30px;
+        padding-right: 30px;
+    }    
+
+    .sidebar #widget_sp_image-3 img {
+        width: 75%;
+        @include border-radius(200px);
+        border: 4px solid $hr-border;
+    }    
+
+}
+
+// Exclusive Media Queries /////////////////////////////////////////////////////////////////
+
+// Extra small devices only (phones, less than 768px)
+@media (max-width: $screen-xs-max) {
+
+    .clipboard-icon {        
+        padding-left: 109px;
+        padding-top: 13px;        
+    }
+
+    .footer-logo {
+        padding-bottom: $space-sm;
+        display: block;
+    }    
+
+    .logos .container div {
+        padding: 10px 75px;
+    }    
+    
+    .masthead, .primary-content, .more-foot, .small-footer, .main-col {
+        padding-top: ($space-lg - 50);        
+        padding-bottom: ($space-lg - 50);
+    }
+
+    .body-content {
+
+        h1 {
+            font-size: ($font-size-h1 * 0.7);
+        }
+        h2 {
+            font-size: ($font-size-h2 * 0.7);
+        } 
+        h3 {
+            font-size: ($font-size-h3 * 0.7);
+        }    
+        h4 {
+            font-size: ($font-size-h4 * 0.7);
+        } 
+        h5 {
+            font-size: ($font-size-h5 * 0.8);
+        }   
+        h6 {
+            // font-size: $font-size-h6;
+        }      
+
+        p, ul, ol {
+            margin: $mobile-paragraph-top-margin;
+        }                
+    }
+
+    .primary-content, .masthead, .logos, .footer {
+        .btn {
+            margin: $mobile-paragraph-top-margin;
+        }  
+    }
+
+    .col-no-padding-xs {
+        padding-left: 0px;
+        padding-right: 0px;
+    }        
+    
+    .navbar-header .navbar-brand {
+        width: 100%;
+    }
+
+    .no-float-xs {
+        float: none!important;
+    }
+
+
+
+}
+
+// Small devices only (tablets, 768px to 992px)
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+
+    .col-no-padding-sm {
+        padding-left: 0px;
+        padding-right: 0px;
+    }    
+
+    .no-float-sm {
+        float: none!important;
+    }      
+}
+
+// Medium devices only (desktops, 992px to 1200px)
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+
+    .col-no-padding-md {
+        padding-left: 0px;
+        padding-right: 0px;
+    }   
+    
+    .no-float-md {
+        float: none!important;
+    }       
+}
+
+// Large devices only (large desktops, 1200px and up)
+@media (min-width: $screen-lg-min) {
+
+    .col-no-padding-lg {
+        padding-left: 0px;
+        padding-right: 0px;
+    }        
+
+    .no-float-lg {
+        float: none!important;
+    }      
+}

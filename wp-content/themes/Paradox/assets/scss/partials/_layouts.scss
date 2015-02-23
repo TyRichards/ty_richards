@@ -1,0 +1,88 @@
+// Body /////////////////////////////////////////////////////////////////
+
+// Header /////////////////////////////////////////////////////////////////
+
+body > header { 
+    // @include dynamic-bg($header-bg-color); 
+    // margin-bottom: -20px;
+}
+
+// Top Header Section /////////////////////////////////////////////////////////////////
+
+.top-navbar {
+    padding-top: $space-sm;
+    padding-bottom: $space-sm;    
+}
+
+.top-header {
+    padding-top: $space-sm;
+    padding-bottom: $space-sm;
+}
+
+// Navbar Section /////////////////////////////////////////////////////////////////
+
+// Masthead Section /////////////////////////////////////////////////////////////////
+
+.masthead {
+    padding-top: 0px;
+    padding-bottom: 140px;    
+}
+
+// Body Content Section /////////////////////////////////////////////////////////////////
+
+.body-content {
+    // background: image-url('cream_dust.png') repeat;
+
+    .masthead, .primary-content, .block-section {
+        
+    }    
+}
+
+// Block /////////////////////////////////////////////////////////////////
+
+.block {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+// Primary Content Section /////////////////////////////////////////////////////////////////
+
+.primary-content {
+    padding-top: $space-lg;
+    padding-bottom: $space-lg;
+}
+
+// Main Column Section /////////////////////////////////////////////////////////////////
+
+.main-col {
+    padding-bottom: $space-xs;
+}
+
+// Sidebar Section /////////////////////////////////////////////////////////////////
+
+
+
+// More-Foot Section /////////////////////////////////////////////////////////////////
+
+.more-foot {
+    padding-top: $space-lg;
+    padding-bottom: $space-lg;
+}
+
+// Small Footer Section /////////////////////////////////////////////////////////////////
+
+.small-footer {
+    padding: $space-lg-vert;
+
+    ul, ol, p {
+        margin-bottom: 0;
+    }
+}
+
+.credit-footer {
+    padding: $space-sm-vert;
+
+    ul, ol, p {
+        margin-bottom: 0;
+    }
+}

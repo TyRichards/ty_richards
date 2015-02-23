@@ -1,0 +1,40 @@
+// Dynamic Background Changes causes text color changes
+// @include dynamic-bg(#ffffff);
+
+@mixin dynamic-bg($bg-color) {
+  @if lightness($bg-color) < 75% {
+    
+    background-color: $bg-color;
+    color: lighten($bg-color, 33%);
+    
+    a:hover, .btn, .social-btns a:hover, h2, h3, ul li a:hover, .top-navbar .navbar .feature-link li a, .navbar .nav .menu-item > a:hover, body > header .navbar .nav .current-menu-item > a { 
+        color: $navbar-default-link-hover-color; //#ffffff
+      } 
+    a, p, h6, a:hover, ul li a, .top-navbar .navbar .feature-link li a:hover, .navbar .nav .menu-item > a { 
+      color: $navbar-default-link-color; 
+    }
+
+  } @else {
+
+    background-color: $bg-color;
+    a, h2, h3, .btn, .navbar .nav .menu-item > a { color: darken($bg-color, 50%)!important; } 
+    p, .navbar .nav .menu-item > a:hover, a:hover { color: darken($bg-color, 33%)!important; }
+
+  }
+}
+
+// Dynamic Headers Changes causes text color changes
+// @include dynamic-header-color($color, $bg-color);
+
+@mixin dynamic-headings-color($color, $bg-color, $text-color) {
+  @if $color == $bg-color {     
+
+    h1, h2, h3, h4, h5, h6, a, p, li { color: darken($bg-color, 40%); }
+  
+  } @else {
+
+    h1, h2, h3, h4, h5, h6 { color: $headings-color; }
+    p, li { color: $text-color; }
+
+  }
+}
