@@ -3081,8 +3081,8 @@ input[type="button"].btn-block,
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("/assets/fonts/../fonts/glyphicons-halflings-regular.eot?1415206264");
-  src: url("/assets/fonts/../fonts/glyphicons-halflings-regular.eot?&1415206264#iefix") format("embedded-opentype"), url("/assets/fonts/../fonts/glyphicons-halflings-regular.woff?1415206264") format("woff"), url("/assets/fonts/../fonts/glyphicons-halflings-regular.ttf?1415206264") format("truetype"), url("/assets/fonts/../fonts/glyphicons-halflings-regular.svg?1415206264#glyphicons-halflingsregular") format("svg");
+  src: url("/assets/fonts/../fonts/glyphicons-halflings-regular.eot?1424661397");
+  src: url("/assets/fonts/../fonts/glyphicons-halflings-regular.eot?&1424661397#iefix") format("embedded-opentype"), url("/assets/fonts/../fonts/glyphicons-halflings-regular.woff?1424661397") format("woff"), url("/assets/fonts/../fonts/glyphicons-halflings-regular.ttf?1424661397") format("truetype"), url("/assets/fonts/../fonts/glyphicons-halflings-regular.svg?1424661397#glyphicons-halflingsregular") format("svg");
 }
 /* line 21, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.0.3.0/vendor/assets/stylesheets/bootstrap/_glyphicons.scss */
 .glyphicon {

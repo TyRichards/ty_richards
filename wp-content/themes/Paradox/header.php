@@ -68,7 +68,7 @@
 						</button>
 						<a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
 							<?php // echo esc_attr(get_bloginfo('name', 'display')); ?>
-							<img style="max-width:400px; margin-top: -9px;" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png">
+							<img style="max-width:350px; margin-top: -9px;" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png">
 						</a>					
 					</div>						
 					<div class="collapse navbar-collapse navbar-primary-collapse">
